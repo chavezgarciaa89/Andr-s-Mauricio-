@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>El lugar donde pesas menos</title>
+
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>En la Tierra pesas distinto que en Marte, Jupiter, Saturno o Neptuno</p>
+    <img src="marte.png" width="100" height="100"/>
+    <img src="jupiter.png" width="100" height="100"/>
+    <img src="neptuno.png" width="200" height="100"/>
+    <img src="neptuno.webp" width="100" height="100"/>
+
+    <script>
+        var usuario = prompt("Cual es tu peso?");
+        var planeta = parseInt(prompt("Elige tu planeta\n 1 es marte, 2 es jupiter, 3 es saturno, 4 es neptuno"));
+        var peso = parseInt(usuario);
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_saturno = 10.44;
+        var g_neptuno = 1.64;
+        var peso_final = 0;
+        var nombre ="";
+        if (planeta == 1) {
+            peso_final = peso * g_marte / g_tierra;
+            nombre = "Marte";
+        }
+        else if (planeta == 2) {
+            peso_final = peso * g_jupiter / g_tierra;
+            nombre = "Jupiter";
+        }
+        else if (planeta == 3) {
+            peso_final = peso * g_saturno / g_tierra;
+            nombre = "Saturno";
+        }
+        else if (planeta == 4) {
+            peso_final = peso * g_neptuno / g_tierra;
+            nombre = "Neptuno";
+        }
+        peso_final = parseInt(peso_final);
+        document.write("Tu peso en " + nombre + " es <strong>" + peso_final + " Kilos</strong>");
+    </script>
+</body>
+</head>
+
+</html>
